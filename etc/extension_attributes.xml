@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Atwix Team
+ * @copyright Copyright (c) 2018 Atwix (https://www.atwix.com/)
+ * @package Atwix_JoinOrderExtAttribute
+ */
+-->
+<!-- File: app/code/Atwix/JoinOrderExtAttribute/etc/extension_attributes.xml -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
+    <extension_attributes for="Magento\Sales\Api\Data\OrderInterface">
+        <attribute code="customer_dob" type="string">
+            <join reference_table="customer_entity" reference_field="entity_id" join_on_field="customer_id">
+                <field>dob</field>
+            </join>
+        </attribute>
+    </extension_attributes>
+</config>
